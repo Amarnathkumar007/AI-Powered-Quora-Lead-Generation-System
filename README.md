@@ -1,88 +1,59 @@
-# 🎯 AI Lead Generation Agent - Powered by Firecrawl's Extract Endpoint
-AI Lead Generation Agent that automatically discovers and qualifies potential leads from Quora. Using Firecrawl for intelligent web scraping, Phidata for agent orchestration, and Composio for Google Sheets integration, you'll create a system that can continuously generate and organize qualified leads with minimal human intervention!
+# AI Powered Quora Lead Generation System
 
-![AI Lead Generation Agent](https://github.com/GURPREETKAURJETHRA/AI-Lead-Generation-Agent/blob/main/IMG_AILG/AIL1.jpg) 
+A Streamlit application that helps generate leads from Quora by searching for relevant posts and extracting user information.
 
-Here's what it does:                    
-↳ Finds potential leads from online discussions                                      
-↳ Extracts user profiles using intelligent web scraping                  
-↳ Organizes qualified leads in Google Sheets                     
-↳ Runs on autopilot without human supervision        
+## Features
 
-![AI Lead Generation Agent](https://github.com/GURPREETKAURJETHRA/AI-Lead-Generation-Agent/blob/main/IMG_AILG/AIL2.jpg) 
-           
-The best part?                 
-It's built with tools anyone can use:                    
+- Searches Quora for relevant posts based on your company description
+- Extracts user information including:
+  - Username
+  - Bio
+  - Post type (question/answer)
+  - Timestamp
+  - Upvotes
+  - Links included in posts
+- Formats and writes extracted data to Google Sheets
 
-→ **Firecrawl** for smart web scraping                     
-→ **phidata** for agent orchestration                      
-→ **Composio** for Google Sheets integration                       
-→ **OpenAI GPT-4o** for lead qualification                            
-       
-- No more manual searching.            
-- No more copy-pasting.                   
-- No more spreadsheet updating.                         
-                                           
-Your sales team can finally focus on what matters:                 
-Building relationships and closing deals.                       
-         
+## Requirements
 
-## Features🌟
+- Python 3.x
+- Streamlit
+- Firecrawl API key
+- OpenAI API key
+- Composio API key
 
-- **🎯 Targeted Search**: Uses Firecrawl's search endpoint to find relevant Quora URLs based on your search criteria
-  
-- **💡 Intelligent Extraction**: Leverages Firecrawl's new Extract endpoint to pull user information from Quora profiles
-  
-- **⚙️ Automated Processing**: Formats extracted user information into a clean, structured format
-  
-- **💻 Google Sheets Integration**: Automatically creates and populates Google Sheets with lead information
-  
-- **✍️ Customizable Criteria**: Allows you to define specific search parameters to find your ideal leads for your niche
-  
+## Installation
 
-![AI Lead Generation Agent](https://github.com/GURPREETKAURJETHRA/AI-Lead-Generation-Agent/blob/main/IMG_AILG/AIL3.jpg) 
-
-
-The AI Lead Generation Agent automates the process of finding and qualifying potential leads from Quora. It uses Firecrawl's search and the new Extract endpoint to identify relevant user profiles, extract valuable information, and organize it into a structured format in Google Sheets. This agent helps sales and marketing teams efficiently build targeted lead lists while saving hours of manual research!!!
-
-
-![AI Lead Generation Agent](https://github.com/GURPREETKAURJETHRA/AI-Lead-Generation-Agent/blob/main/IMG_AILG/AIL4.jpg) 
-
-## ⚡How to Get Started
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/GURPREETKAURJETHRA/AI-Lead-Generation-Agent.git
-   cd AI-Lead-Generation-Agent
+1. Clone the repository
+2. Install required packages:
    ```
-3. **Install the required packages**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. **Important thing to do in composio**:
-    - in the terminal, run this command: `composio add googlesheets`
-    - In your compposio dashboard, create a new google sheet intergation and make sure it is active in the active integrations/connections tab
-
-5. **Set up your API keys**:
-   - Get your Firecrawl API key from [Firecrawl's website](https://www.firecrawl.dev/app/api-keys)
-   - Get your Composio API key from [Composio's website](https://composio.ai)
-   - Get your OpenAI API key from [OpenAI's website](https://platform.openai.com/api-keys)
-
-6. **Run the application**:
-   ```bash
-   streamlit run ai_lead_generation_agent.py
+   pip install streamlit requests phi firecrawl pydantic composio_phidata
    ```
 
+## Usage
 
-Happy coding! 🚀✨
+1. Run the application:
+   ```
+   streamlit run app.py
+   ```
+2. Enter your API keys in the sidebar:
+   - Firecrawl API key
+   - OpenAI API key
+   - Composio API key
+3. Specify the number of links to search (1-10)
+4. Describe what kind of leads you're looking for in the text area
+5. Click "Generate Leads" button
 
-## ©️ License 🪪 
+The application will:
+1. Transform your query into a focused search term
+2. Search Quora for relevant posts
+3. Extract user information from found posts
+4. Format the data and write it to a new Google Sheet
+5. Provide a link to the generated Google Sheet
 
-Distributed under the MIT License. See `LICENSE` for more information.
+## API Key Requirements
 
----
-
-#### **If you like this LLM Project do drop ⭐ to this repo**
-#### Follow me on [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gurpreetkaurjethra/) &nbsp; [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GURPREETKAURJETHRA/)
-
----
+- Firecrawl API key from [Firecrawl's website](https://www.firecrawl.dev/app/api-keys)
+- OpenAI API key from [OpenAI's website](https://platform.openai.com/api-keys)
+- Composio API key from [Composio's website](https://composio.ai)
+```
